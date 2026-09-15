@@ -21,6 +21,23 @@
     android:key="top_level_settings">
 
     <com.android.settingslib.widget.UntitledPreferenceCategory
+        android:order="-140"
+        android:key="top_level_account_category"/>
+
+    <com.android.settingslib.widget.UntitledPreferenceCategory
+        android:order="-135"
+        android:key="top_level_vibe_category">
+        <com.android.settings.widget.HomepagePreference
+            android:icon="@drawable/ic_homepage_vibe"
+            android:key="top_level_vibe"
+            android:order="-10"
+            android:title="@string/vibe_settings_title"
+            android:summary="@string/vibe_settings_summary"
+            settings:highlightableMenuKey="@string/menu_key_vibe"
+            settings:controller="com.android.settings.vibe.TopLevelVibePreferenceController"/>
+    </com.android.settingslib.widget.UntitledPreferenceCategory>
+
+    <com.android.settingslib.widget.UntitledPreferenceCategory
         android:order="-130"
         android:key="top_level_connectivity_category">
         <com.android.settings.widget.HomepagePreference
@@ -231,9 +248,6 @@
             settings:highlightableMenuKey="@string/menu_key_emergency"/>
     </com.android.settingslib.widget.UntitledPreferenceCategory>
 
-    <com.android.settingslib.widget.UntitledPreferenceCategory
-        android:order="-90"
-        android:key="top_level_account_category"/>
 
     <com.android.settingslib.widget.UntitledPreferenceCategory
         android:order="100"

@@ -27,6 +27,20 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:order="-135"
+        android:key="top_level_vibe_category"
+        android:layout="@layout/settingslib_untitled_preference_category">
+        <com.android.settings.widget.HomepagePreference
+            android:icon="@drawable/ic_settings_vibe"
+            android:key="top_level_vibe"
+            android:order="-10"
+            android:title="@string/vibe_settings_title"
+            android:summary="@string/vibe_settings_summary"
+            settings:highlightableMenuKey="@string/menu_key_vibe"
+            settings:controller="com.android.settings.vibe.TopLevelVibePreferenceController"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:order="-130"
         android:key="top_level_connectivity_category"
         android:layout="@layout/settingslib_expressive_untitled_preference_category">
